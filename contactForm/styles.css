@@ -1,0 +1,294 @@
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: rgb(184, 212, 184);
+  }
+
+  *,
+  *::before,
+  *::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Karla';
+    src: url('./contact-form-main/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Karla';
+    src: url('./contact-form-main/assets/fonts/static/Karla-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  /* Variables */
+  :root {
+    --mainFont : 'Karla';
+    --boldFont: 'Karla';
+   }
+   
+
+   /* Form */
+
+/*Containers*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    padding: 20px;
+}
+
+.form-container {
+    background-color: #fefcfc;
+    border-radius: 10px;
+    padding: 25px;
+    min-width: 500px;
+    min-height: 480px;
+}
+
+/* uniques tags */
+
+h1 {
+    font-family: var(--boldFont);
+    font-weight: 700;
+    font-size: 24px;
+    padding-bottom: 23px;
+}
+
+.asterisco {
+    color: rgb(82, 123, 82);
+}
+
+input {
+    font-family: var(--mainFont);
+    font-size: 18px;
+    font-weight: 200;
+}
+
+/* Principals */
+
+.name-label, .radio-label, .radio-input, .checkbox-label{
+    font-family: var(--mainFont);
+    font-size: 15px;
+    color: rgb(41, 40, 40);
+}
+
+input, .radio-input, textarea {
+    border-radius: 5px;
+    border: 1px solid rgb(129, 122, 122);
+    color: rgb(41, 40, 40);;
+}
+
+
+/*label and inputs for name and lastname*/
+   
+.container-names {
+    display: flex;
+}
+
+.container-name {
+    display: flex;
+    flex-direction: column;
+    margin-right: 7px;
+    flex: 1;
+}
+
+.name-label {
+    margin-bottom: 8px;
+}
+
+.name-input {
+    padding-top: 18px;
+}
+
+.name-input:hover {
+    border: 1px solid rgb(77, 133, 100);
+}
+
+
+/*Email label and input*/
+
+.container-email {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-input {
+    width: 97%;
+    padding-top: 18px;
+}
+
+.email-input:hover {
+    border: 1px solid rgb(77, 133, 100);
+}
+
+/*Radio label and input*/
+
+.radio-container {
+    display: flex;
+    margin-top: 8px;
+}
+
+.radio-label{
+    margin-bottom: 8px; 
+}
+
+.radio-input {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-right: 8px;
+    padding: 12px 5px;
+}
+
+
+.radio-button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    accent-color: rgb(55, 113, 80);
+}
+
+.radio-button:checked {
+    border: 1px solid rgb(55, 113, 80);
+    background-color:rgb(77, 133, 100);
+}
+
+
+/* Message label and input*/
+
+textarea {
+    margin-top: 8px;
+    width: 487px;
+    height: 80px;
+}
+
+textarea:hover {
+    border: 1px solid rgb(77, 133, 100);
+}
+
+
+/*Checkbox consent label and input */
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    padding: 6px 0px;
+}
+
+.checkbox-label {
+    margin-left: 10px;
+    width: 100%;
+}
+
+#consent {
+    accent-color: rgb(55, 113, 80);
+}
+
+/*Button submit*/
+
+.submit {
+    width: 99%;
+    padding: 18px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(44, 130, 84);
+    color: #fefcfc;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.6s;
+}
+
+.submit:hover {
+    background-color: rgb(32, 78, 53);
+}
+
+/*Error messages */
+.error-message {
+    color: red;
+    font-family: var(--mainFont);
+    margin-top: 7px;
+}
+
+/* Succes message */
+
+.hidden {
+    position: absolute;
+    top: -120px;
+    left: 70px;
+    margin-top: 50px;
+    padding: 18px 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(41, 74, 56);
+    z-index: 1;
+    font-family: var(--boldFont);
+    font-size: 18px;
+    color: #fefcfc;
+    display: none;
+}
+
+.form-container {
+    position: relative; 
+}
+
+.inner-container-message {
+    padding: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+
+small {
+    font-size: 14px;
+    padding: 10px;
+    font-family: var(--mainFont);
+    font-weight: 200;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 676px) {
+    .container {
+        height: 160vh;
+    }
+
+    .form-container {
+        min-width: 300px;
+    }
+
+    .container-names {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .radio-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    textarea {
+        margin-top: 8px;
+        width: 307px;
+        height: 200px;
+    }
+
+    #name-error {
+        margin-bottom: 10px;
+    }
+}

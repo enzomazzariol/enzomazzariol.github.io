@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+LIJjlf6pXwkvDlD5o8k8b5D" crossorigin="anonymous">
+</head>
+<body>
+    <article class="container">
+        <div class="form-container">
+
+            <div id="message-box" class="hidden">
+                <div class="inner-container-message">
+                    <img src="./contact-form-main/assets/images/check.svg" alt="check icon" width="20px">
+                    <p>Message Sent!</p>
+                </div>
+                <small>Thanks for completing the form. We'll be in touch soon!</small>
+            </div>
+            
+            <form id="contact-form" action="GET">
+                <h1>Contact Us</h1>
+
+                <div class="container-names">
+
+                    <div class="container-name">
+                        <label for="name" class="name-label">First Name <span class="asterisco">*</span></label> 
+                        <input type="text" name="name" id="name" class="name-input" required>
+                        <p id="name-error" class="error-message"></p>
+                    </div>
+
+                    <div class="container-name">
+                        <label for="lastname" class="name-label">Last Name <span class="asterisco">*</span></label>  
+                        <input type="text" name="lastname" id="lastname" class="name-input" required>
+                        <p id="lastname-error" class="error-message"></p>
+                    </div>
+
+                </div>
+
+                <br>
+                <div class="container-email">
+                    <label for="email" class="name-label email-label">Email Address <span class="asterisco">*</span></label> 
+                    <input type="email" name="email" id="email" class="email-input" required>
+                    <p id="email-error" class="error-message"></p>
+                </div>
+
+
+                <br>
+                <label for="type" class="radio-label">Query Type <span class="asterisco">*</span></label>  
+               
+                <div class="radio-container">
+                    <div class="radio-input">
+                        <input type="radio" name="query_type" id="query-type" class="radio-button" required>
+                        <label for="general">General Enquiry</label>
+
+                    </div>
+                    <div class="radio-input">
+                        <input type="radio" name="query_type" id="query-type" class="radio-button" required>
+                        <label for="support">Support Request</label>
+                    </div>
+                    
+                </div>
+                <p id="queryType-error" class="error-message"></p>
+                
+                
+                    <br>
+
+                <label for="message" class="name-label">Message <span class="asterisco">*</span></label> <br>
+                <textarea name="message" id="message" rows="4" required></textarea>
+                <p id="message-error" class="error-message"></p>
+
+                <br>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="consent" id="consent" required>
+                    <label for="consent" class="checkbox-label">I consent to being contacted by the team <span class="asterisco">*</span></label> <br>
+                    
+                </div>
+                <p id="consent-error" class="error-message"></p>
+              
+                <br>
+                <div class="submit-container">
+                    <input type="submit" name="submit" class="submit" id="submit" value="Submit">
+                </div>
+            </form>
+                    
+        </div>
+    </article>
+    <script src="form.js"></script>
+</body>
+</html>
